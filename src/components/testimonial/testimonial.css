@@ -1,0 +1,60 @@
+/* Pagination Dots (Custom, Professional Look) */
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.custom-bullet {
+  background: rgba(0, 0, 0, 0.15);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active.custom-bullet {
+  background: var(--primary, #2563eb); /* your Tailwind primary color */
+  width: 26px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+}
+
+/* Hover fade animation */
+.swiper:hover .swiper-button-prev-custom,
+.swiper:hover .swiper-button-next-custom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Arrows initially hidden (appear on hover for premium look) */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+/* Position arrows nicely on large screens */
+@media (min-width: 1024px) {
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .swiper-button-prev-custom {
+    left: -2rem;
+  }
+
+  .swiper-button-next-custom {
+    right: -2rem;
+  }
+}
