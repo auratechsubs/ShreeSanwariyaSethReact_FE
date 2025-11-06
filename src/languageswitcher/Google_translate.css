@@ -1,0 +1,41 @@
+.google-translate-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  font-family: inherit;
+  position: relative;
+}
+
+.google-translate-loading {
+  font-size: 14px;
+  color: #666;
+  margin-left: 8px;
+}
+
+.google-translate-container .goog-te-gadget {
+  font-family: inherit !important;
+  font-size: 14px !important;
+  color: inherit !important;
+}
+
+.google-translate-container select.goog-te-combo {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+.google-translate-container select.goog-te-combo:hover {
+  border-color: #aaa;
+}
+
+.goog-logo-link {
+  display: none !important;
+}
+.goog-te-gadget span {
+  display: none !important;
+}

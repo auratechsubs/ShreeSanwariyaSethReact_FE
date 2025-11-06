@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import logo from '@/assets/logo.png';
 import { useGlobalContext } from '@/Contaxt/UseGlobelcontaxt';
 import BookingModal from './BookingModal';
+import GoogleTranslate from '@/languageswitcher/Google_translate';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +34,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${
         isScrolled ? 'bg-card/95 backdrop-blur-md shadow-card' : 'bg-transparent lg:bg-transparent bg-white/95'
       }`}
     >
@@ -61,10 +62,11 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <a href={contactData?.call_link_1} className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors">
+            {/* <a href={contactData?.call_link_1} className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors">
               <Phone className="w-5 h-5" />
               <span className="font-medium">{contactData?.ContactUs_Mobile_Number_1}</span>
-            </a>
+            </a> */}
+            <GoogleTranslate/>
             <Button className="bg-primary hover:bg-primary/90"  onClick={() => setIsBookingOpen(true)} >Book Now</Button>
           </div>
         <BookingModal
@@ -105,10 +107,12 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="mt-4 px-4 space-y-3">
-              <a href={contactData?.call_link_1} className="flex items-center space-x-2 text-foreground">
+              {/* <a href={contactData?.call_link_1} className="flex items-center space-x-2 text-foreground">
                 <Phone className="w-5 h-5" />
                 <span>{contactData?.ContactUs_Mobile_Number_1}</span>
-              </a>
+              </a> */}
+                          <GoogleTranslate/>
+
               <Button className="w-full bg-primary hover:bg-primary/90" onClick={() =>{ setIsBookingOpen(true) , setIsOpen(false)}}>Book Now</Button>
             </div>
           </div>

@@ -147,3 +147,35 @@ All colors MUST be HSL.
     box-shadow: 0 4px 15px hsl(43 85% 45% / 0.4);
   }
 }
+
+/* .VIpgJd-ZVi9od-ORHb-OEVmcd{
+  display: none;
+  height: 0px;
+  background-color: transparent;
+} */
+ .goog-te-banner-frame.skiptranslate,
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure body is not pushed down */
+body {
+  top: 0 !important;
+  position: static !important;
+}
+
+/* Hide the skiptranslate wrapper */
+body > .skiptranslate {
+  /* display: none !important; */
+}
+
+/* Optional: hide the small Google icon if visible */
+.goog-te-gadget-icon {
+  display:inline-block;
+}

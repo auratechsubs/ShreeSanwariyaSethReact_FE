@@ -10,9 +10,11 @@ import City_Section from '@/components/City_section/City_Section';
 import TourPackage from '@/components/Tourpackage/TourPackage';
 import Testimonials from '@/components/testimonial/Testimonials';
 import { BASE_URL } from '@/components/Helper/Base_Url';
+import { LanguageSwitcher } from '@/languageswitcher/Language_Switcher';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
-  
+    const { t } = useTranslation();
 
 
   return (
@@ -22,13 +24,13 @@ const Home = () => {
         keywords="UAE tours, Dubai packages, Abu Dhabi travel, UAE tourism, India to UAE travel, UAE tour packages"
           canonical={`${BASE_URL}`}
           url={`${BASE_URL}`}
-      />
+          />
       
       <div className="min-h-screen">
         {/* Hero Section */}
 
          <Slider/>
-         
+         {/* <LanguageSwitcher/> */}
       {/* Cities Section */}
         
         <City_Section/>
